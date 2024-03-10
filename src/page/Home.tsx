@@ -11,6 +11,10 @@ import Vector1 from "../assets/CommunityLogo/Vector1.svg";
 import Vector2 from "../assets/CommunityLogo/Vector2.svg";
 import Vector3 from "../assets/CommunityLogo/Vector3.svg";
 import Body from "../assets/Body/Body.svg";
+import Icon1 from "../assets/Achievements/Icon.svg";
+import Icon2 from "../assets/Achievements/Icon2.svg";
+import Icon3 from "../assets/Achievements/Icon3.svg";
+import Icon4 from "../assets/Achievements/Icon4.svg";
 
 function Home() {
   const clients = [Logo1, Logo2, Logo3, Logo4, Logo5, Logo6, Logo7];
@@ -81,7 +85,7 @@ function Home() {
           </div>
         </nav>
         {/* banner */}
-        <div className="flex item-center justify-center gap-24 px-36 py-24 ">
+        <div className="flex item-center justify-between px-36 py-24 ">
           {/* title */}
           <div className="flex flex-col item-center justify-center gap-2">
             <h1 className="text-6xl text-[#4D4D4D]">Lessons and insights</h1>
@@ -106,10 +110,10 @@ function Home() {
         </div>
       </div>
       {/* Clients */}
-      <div className="flex flex-col px-36 py-16 text-center">
+      <div className="flex flex-col  px-36 py-16 text-center">
         <h2 className="text-[#4D4D4D] text-4xl mb-2">Our Clients</h2>
         <p className="text-[#717171] text-base mb-5">We have been working with some Fortune 500+ clients</p>
-        <div className="flex justify-around">
+        <div className="flex justify-between">
           {clients.map((client, index) => {
             return <img key={index} src={client}></img>;
           })}
@@ -122,9 +126,9 @@ function Home() {
           <h2>in a single system</h2>
         </p>
         <p className="text-base text-[#717171] my-2">Who is Nextcent suitable for?</p>
-        <div className="grid grid-cols-3 gap-x-20">
+        <div className="grid grid-cols-3 gap-x-28">
         {community.map((item, index) => (
-      <div key={index} className="flex flex-col items-center justify-center text-center px-8 py-4 w-80  shadow transition-shadow hover:shadow-xl">
+      <div key={index} className="flex flex-col items-center justify-center text-center px-8 py-4 w-80 rounded-lg  shadow transition-shadow hover:shadow-xl">
         <div className="mb-2">
           <img src={item.image} alt="" />
         </div>
@@ -136,7 +140,7 @@ function Home() {
         </div>
       </div>
       {/* body */}
-      <div className="flex items-center justify-center px-36">
+      <div className="flex items-center justify-between px-36 ">
         <div>
           <img src={Body} alt="" />
         </div>
@@ -154,6 +158,54 @@ function Home() {
         </div>
       </div>
       {/* Achievements */}
+      <div className="flex items-center justify-between  w-full px-36 py-16 bg-[#F5F7FA]">
+        <div>
+          <p className="text-4xl font-semibold">
+            <h2>Helping a local</h2>
+            <h2 className="text-Primary">business reinvent itself</h2>
+          </p>
+          <p className="text-[#18191F] text-lg">We reached here with our hard work and dedication</p>
+        </div>
+        <div>
+          {/* row */}
+          <div className="flex gap-24 mb-8">
+            {/* col */}
+          <div className="flex gap-4">
+            <img src={Icon1} alt="" />
+            <div>
+              <h3 className="text-[#4D4D4D] font-bold text-2xl">2,245,341</h3>
+              <p className="text-[#717171] font-normal text-base">Members</p>
+            </div>
+          </div>
+          <div className="flex gap-4">
+            <img src={Icon2} alt="" />
+            <div>
+              <h3 className="text-[#4D4D4D] font-bold text-2xl">46,328</h3>
+              <p className="text-[#717171] font-normal text-base">Clubs</p>
+            </div>
+          </div>
+          </div>
+          {/* row */}
+          <div className="flex gap-24 mb-8">
+            {/* col */}
+          <div className="flex gap-4">
+            <img src={Icon3} alt="" />
+            <div>
+              <h3 className="text-[#4D4D4D] font-bold text-2xl">828,867</h3>
+              <p className="text-[#717171] font-normal text-base">Event Bookings</p>
+            </div>
+          </div>
+          <div className="flex gap-4">
+            <img src={Icon4} alt="" />
+            <div>
+              <h3 className="text-[#4D4D4D] font-bold text-2xl">1,926,436</h3>
+              <p className="text-[#717171] font-normal text-base">Payments</p>
+            </div>
+          </div>
+          </div>
+          
+        </div>
+      </div>
     </div>
   )
 }
